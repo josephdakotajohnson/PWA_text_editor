@@ -20,7 +20,6 @@ module.exports = () => {
     //HtmlWebpackPlugin
     //InjectManifest
     //WebpackPwaManifest
-    //
     plugins: [
       new HtmlWebpackPlugin({
         template: "./index.html",
@@ -30,7 +29,7 @@ module.exports = () => {
         swSrc: "./src-sw.js",
         swDest: "src-sw.js",
       }),
-      newWebpackPwaManifest({
+      new WebpackPwaManifest({
         name: "Text Editor",
         short_name: "Text Ed",
         description: "A text editor for editing text.",
